@@ -8,13 +8,15 @@ public class Character
     public int Defence;
     public int Health;
     public int Critical;
+    public GameObject[] Inventory;
 
-    public Character(int attack, int defence, int health, int critical)
+    public Character(int attack, int defence, int health, int critical, GameObject[] inventory)
     {
         Attack = attack;
         Defence = defence;
         Health = health;
         Critical = critical;
+        Inventory = inventory;
     }
 
     public void Equip(Item item)
