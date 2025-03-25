@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class Character : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int Attack;
+    public int Defence;
+    public int Health;
+    public int Critical;
 
-    // Update is called once per frame
-    void Update()
+    public Character(int attack, int defence, int health, int critical)
     {
-        
+        Attack = attack;
+        Defence = defence;
+        Health = health;
+        Critical = critical;
     }
 }
