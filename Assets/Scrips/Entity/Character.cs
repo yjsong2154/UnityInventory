@@ -21,11 +21,9 @@ public class Character
 
     public void Equip(Item item)
     {
-        Debug.Log("장비");
         if (equipItem == item)
         {
             unEquip();
-            Debug.Log($"해제 {Attack}, {Defence}, {Health}, {Critical}");
         }
         else
         {
@@ -35,7 +33,6 @@ public class Character
             Health += item.Health;
             Critical += item.Critical;
             equipItem = item;
-            Debug.Log($"착용 {Attack}, {Defence}, {Health}, {Critical}");
         }
     }
 
