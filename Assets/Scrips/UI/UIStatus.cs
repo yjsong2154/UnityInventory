@@ -12,12 +12,19 @@ public class UIStatus : MonoBehaviour
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI criticalText;
 
-    void Start()
+    // void Start()
+    // {
+    //     backButton.onClick.AddListener(OnBackButtonClicked);
+    //     Text[] texts = GetComponentsInChildren<Text>();
+
+    //     UpdateUI();
+    // }
+
+    void OnEnable()
     {
         backButton.onClick.AddListener(OnBackButtonClicked);
-        player = GameManager.Instance.Player;
         Text[] texts = GetComponentsInChildren<Text>();
-
+        player = GameManager.Instance.Player;
         UpdateUI();
     }
 

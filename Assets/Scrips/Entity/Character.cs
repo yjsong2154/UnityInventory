@@ -25,6 +25,7 @@ public class Character
         if (equipItem == item)
         {
             unEquip();
+            Debug.Log($"{Attack}, {Defence}, {Health}, {Critical}");
         }
         else
         {
@@ -34,6 +35,7 @@ public class Character
             Health += item.Health;
             Critical += item.Critical;
             equipItem = item;
+            Debug.Log($"{Attack}, {Defence}, {Health}, {Critical}");
         }
         RefreshSlot?.Invoke();
     }
