@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Timeline;
 
-public class Character : MonoBehaviour
+public class Character
 {
     public int Attack;
     public int Defence;

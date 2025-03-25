@@ -3670,6 +3670,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backButton: {fileID: 1218243833}
+  attackText: {fileID: 1383338345}
+  defenceText: {fileID: 1199599640}
+  healthText: {fileID: 451856354}
+  criticalText: {fileID: 1242177352}
 --- !u!1 &2112261869
 GameObject:
   m_ObjectHideFlags: 0
