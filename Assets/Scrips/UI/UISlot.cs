@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UISlot : MonoBehaviour
 {
     [SerializeField] private Button button;
+    [SerializeField] private Image isEquip;
 
     private Item itemDate;
 
@@ -21,8 +22,14 @@ public class UISlot : MonoBehaviour
         itemDate = GetComponent<Item>();
     }
 
+    private void RefreshUI()
+    {
+        isEquip.gameObject.SetActive(true);
+    }
+
     public void OnItemButtonClick()
     {
         GameManager.Instance.Player.Equip(itemDate);
+        RefreshUI();
     }
 }
