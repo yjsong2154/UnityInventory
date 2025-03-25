@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Timeline;
+using System;
 
 public class Character
 {
@@ -9,6 +9,7 @@ public class Character
     public int Health;
     public int Critical;
     public GameObject[] Inventory;
+    public event Action RefreshSlot;
 
     public Character(int attack, int defence, int health, int critical, GameObject[] inventory)
     {
@@ -34,6 +35,7 @@ public class Character
             Critical += item.Critical;
             equipItem = item;
         }
+        RefreshSlot?.Invoke();
     }
 
     private void unEquip()

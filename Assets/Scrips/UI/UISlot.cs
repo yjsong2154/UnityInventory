@@ -14,6 +14,7 @@ public class UISlot : MonoBehaviour
     void Start()
     {
         button.onClick.AddListener(OnItemButtonClick);
+        GameManager.Instance.Player.RefreshSlot += RefreshUI;
         SetItem();
     }
 
@@ -24,7 +25,14 @@ public class UISlot : MonoBehaviour
 
     private void RefreshUI()
     {
-        isEquip.gameObject.SetActive(true);
+        if (GameManager.Instance.Player.equipItem == itemDate)
+        {
+            isEquip.gameObject.SetActive(true);
+        }
+        else
+        {
+            isEquip.gameObject.SetActive(false);
+        }
     }
 
     public void OnItemButtonClick()
